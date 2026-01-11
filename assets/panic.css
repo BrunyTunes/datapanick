@@ -173,3 +173,25 @@ a:hover{text-decoration:underline}
 }
 #panel h3{margin:0 0 10px 0}
 #panel p{margin:10px 0; color: rgba
+
+/* exit footer */
+#exit{
+  position: fixed;
+  bottom: 18px;
+  left: 18px;
+  z-index: 50;
+  font-size: .85rem;
+  opacity: .55;
+  pointer-events: auto;
+}
+
+#exit a{
+  color: var(--fg);
+  text-decoration: none;
+}
+
+#exit a:hover{
+  text-decoration: underline;
+  opacity: 1;
+}
+
