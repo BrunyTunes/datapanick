@@ -1,12 +1,44 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>datapanick</title>
-  </head>
-  <body>
-    <h1>datapanick</h1>
-    <p>GitHub Pages is working.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>datapanick</title>
+  <meta name="description" content="Artifacts from translation failures between systems and bodies." />
+  <link rel="stylesheet" href="/assets/panic.css" />
+</head>
+<body>
+  <div id="stage">
+    <div id="brand">
+      <span class="title">datapanick</span>
+      <span class="sub">field · artifacts · drift</span>
+    </div>
+
+    <div id="controls">
+      <button class="btn" id="reshuffle" type="button">reshuffle</button>
+      <button class="btn" id="help" type="button">help</button>
+      <a class="btn" href="https://briangaines.io" rel="noopener">exit</a>
+    </div>
+
+    <div id="overlay" aria-hidden="true">
+      <div id="panel" role="dialog" aria-modal="true">
+        <h3>how to use this</h3>
+        <p>
+          This is not a feed. Refresh reshuffles. Nodes drift. Drag to re-place.
+          Click a node to bring it forward.
+        </p>
+        <p>
+          An artifact belongs when you can name the signal that produced the feeling—
+          and the point where meaning failed to translate.
+        </p>
+        <p class="muted">
+          Next: artifacts will live as pages under <code>/artifacts/</code>, and nodes will link out.
+        </p>
+        <button class="btn" id="closeOverlay" type="button">close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/drift.js"></script>
+</body>
 </html>
