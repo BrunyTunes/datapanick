@@ -25,6 +25,8 @@ body{
     linear-gradient(180deg, #07070a, #05060b 55%, #060617);
   color: var(--fg);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+  /* keep your “field” locked */
   overflow:hidden;
 }
 
@@ -35,8 +37,9 @@ a:hover{text-decoration:underline}
   position:relative;
   width:100vw;
   height:100vh;
-  /* Reserve space so nodes/UI don’t sit under the footer bar */
-  padding-bottom: 70px;
+
+  /* reserve space so nodes/UI don’t sit under footer bar */
+  padding-bottom: 86px;
 }
 
 /* faint scanlines + texture */
@@ -119,6 +122,9 @@ a:hover{text-decoration:underline}
   cursor: grab;
   backdrop-filter: blur(10px);
   transform: translateZ(0);
+
+  /* IMPORTANT: keep nodes below footer */
+  z-index: 5;
 }
 
 .node:active{cursor:grabbing}
@@ -190,24 +196,34 @@ a:hover{text-decoration:underline}
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 30;
 
-  padding: 18px 0;
+  /* MUST beat GPU/composited nodes */
+  z-index: 9999;
+  isolation: isolate;
+
   border-top: 1px solid var(--wire);
 
-  /* subtle footer fade like a page footer, not a badge */
-  background: linear-gradient(to bottom, rgba(7,7,10,0), rgba(7,7,10,.65));
+  /* actual footer bar presence (not a faint badge) */
+  background: rgba(7,7,10,.78);
   backdrop-filter: blur(8px);
 
+  padding: 18px 0;
   font-size: 0.9rem;
   color: rgba(233,233,239,.85);
 }
 
+/* If you haven't added .footer-inner etc. yet,
+   this prevents the footer from looking broken. */
+.site-footer > span,
+.site-footer > nav{
+  display: inline-block;
+}
+
+/* briangaines.io-style container */
 .footer-inner{
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 22px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
