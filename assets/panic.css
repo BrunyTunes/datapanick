@@ -178,28 +178,18 @@ a:hover{text-decoration:underline}
 }
 
 
-/* site footer / exit link */
-.site-footer {
-  position: fixed;
+.site-footer{
+  position: absolute;
   bottom: 18px;
   right: 18px;
-  z-index: 100; /* above stage + nodes */
+  z-index: 9999;
   display: flex;
   gap: 12px;
   align-items: center;
   font-size: 0.85rem;
-  opacity: 0.55;
+  opacity: 0.6;
   pointer-events: auto;
 }
 
-.site-footer a {
-  color: var(--fg);
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-  opacity: 1;
-}
 
 
