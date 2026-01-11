@@ -35,6 +35,8 @@ a:hover{text-decoration:underline}
   position:relative;
   width:100vw;
   height:100vh;
+  /* Reserve space so nodes/UI don’t sit under the footer bar */
+  padding-bottom: 70px;
 }
 
 /* faint scanlines + texture */
@@ -182,20 +184,67 @@ a:hover{text-decoration:underline}
   color: rgba(233,233,239,.9);
 }
 
-/* footer — FIXED TO VIEWPORT */
+/* ===== Footer — match briangaines.io (bar + divider + left/right layout) ===== */
 .site-footer{
   position: fixed;
-  bottom: 18px;
-  right: 18px;
-  z-index: 1000;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  font-size: 0.85rem;
-  opacity: 0.6;
-  pointer-events: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+
+  padding: 18px 0;
+  border-top: 1px solid var(--wire);
+
+  /* subtle footer fade like a page footer, not a badge */
+  background: linear-gradient(to bottom, rgba(7,7,10,0), rgba(7,7,10,.65));
+  backdrop-filter: blur(8px);
+
+  font-size: 0.9rem;
+  color: rgba(233,233,239,.85);
 }
 
-.site-footer a{
-  color: var(--fg);
+.footer-inner{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-left{
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+.footer-right{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.footer-right a{
+  color: rgba(233,233,239,.85);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-right a:hover{
+  text-decoration: underline;
+  opacity: 1;
+}
+
+@media (max-width: 520px){
+  .footer-inner{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .footer-right{
+    flex-wrap: wrap;
+    white-space: normal;
+  }
 }
