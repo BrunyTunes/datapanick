@@ -172,7 +172,11 @@ a:hover{text-decoration:underline}
   padding: 16px;
 }
 #panel h3{margin:0 0 10px 0}
-#panel p{margin:10px 0; color: rgba
+#panel p{
+  margin:10px 0;
+  color: rgba(233,233,239,.9);
+}
+
 
 /* site footer / exit link */
 .site-footer {
