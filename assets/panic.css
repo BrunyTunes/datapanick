@@ -15,6 +15,7 @@
 
 *{box-sizing:border-box}
 html,body{height:100%}
+
 body{
   margin:0;
   background:
@@ -39,7 +40,8 @@ a:hover{text-decoration:underline}
 /* faint scanlines + texture */
 #stage::before{
   content:"";
-  position:absolute; inset:0;
+  position:absolute;
+  inset:0;
   background:
     repeating-linear-gradient(
       to bottom,
@@ -56,7 +58,8 @@ a:hover{text-decoration:underline}
 /* corner label */
 #brand{
   position:absolute;
-  top:18px; left:18px;
+  top:18px;
+  left:18px;
   z-index:10;
   display:flex;
   gap:10px;
@@ -80,7 +83,8 @@ a:hover{text-decoration:underline}
 /* help / map toggle */
 #controls{
   position:absolute;
-  top:18px; right:18px;
+  top:18px;
+  right:18px;
   z-index:10;
   display:flex;
   gap:10px;
@@ -164,7 +168,8 @@ a:hover{text-decoration:underline}
 
 #panel{
   position:absolute;
-  top:70px; right:18px;
+  top:70px;
+  right:18px;
   width:min(520px, calc(100vw - 36px));
   border:1px solid var(--wire);
   border-radius: var(--radius);
@@ -177,12 +182,12 @@ a:hover{text-decoration:underline}
   color: rgba(233,233,239,.9);
 }
 
-
+/* footer — FIXED TO VIEWPORT */
 .site-footer{
-  position: absolute;
+  position: fixed;
   bottom: 18px;
   right: 18px;
-  z-index: 9999;
+  z-index: 1000;
   display: flex;
   gap: 12px;
   align-items: center;
@@ -191,5 +196,6 @@ a:hover{text-decoration:underline}
   pointer-events: auto;
 }
 
-
-
+.site-footer a{
+  color: var(--fg);
+}
