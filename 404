@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — datapanick</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="/assets/panic.css" />
+  <style>
+    /* Tiny fallback in case panic.css fails to load */
+    body{min-height:100vh; display:grid; place-items:center; padding:32px}
+    .dp404{
+      width:min(980px, 100%);
+      border:1px solid var(--wire, rgba(190,210,255,.16));
+      border-radius:18px;
+      background: rgba(10,10,18,.45);
+      backdrop-filter: blur(10px);
+      padding:28px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    }
+    .dp404 h1{margin:0 0 10px 0; font-size:2rem}
+    .dp404 p{margin:10px 0; color: rgba(233,233,239,.88); line-height:1.5}
+    .dp404 .actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+    .dp404 .btn{
+      border:1px solid var(--wire, rgba(190,210,255,.16));
+      background: rgba(10,10,18,.45);
+      color: var(--fg, #e9e9ef);
+      border-radius:999px;
+      padding:10px 12px;
+      text-decoration:none;
+      display:inline-block;
+    }
+    .dp404 .btn:hover{border-color: rgba(255,255,255,.25)}
+    .dp404 code{
+      background:rgba(0,0,0,.25);
+      border:1px solid rgba(255,255,255,.08);
+      padding:2px 6px;
+      border-radius:8px;
+    }
+    .dp404 .muted{color: var(--muted, #9aa0b3)}
+  </style>
+</head>
+<body>
+  <main class="dp404" role="main">
+    <div class="muted" style="margin-bottom:10px;">datapanick · field · artifacts · drift</div>
+    <h1>404 — missing node</h1>
+    <p>
+      This page doesn’t exist (or it slipped out of the grid).
+    </p>
+
+    <div class="actions">
+      <a class="btn" href="/">Return to field</a>
+      <a class="btn" href="/artifacts/">Artifacts</a>
+      <a class="btn" href="https://briangaines.io">briangaines.io</a>
+    </div>
+
+    <p class="muted" style="margin-top:16px;">
+      Tried to reach: <code id="path"></code>
+    </p>
+  </main>
+
+  <script>
+    document.getElementById('path').textContent =
+      window.location.pathname + window.location.search + window.location.hash;
+  </script>
+</body>
+</html>
