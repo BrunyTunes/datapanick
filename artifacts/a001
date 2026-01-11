@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>datapanick · a001</title>
+  <link rel="stylesheet" href="/assets/panic.css" />
+  <style>
+    body{overflow:auto}
+    .wrap{max-width:880px; margin:80px auto; padding:0 18px;}
+    .crumb{color:var(--muted); margin-bottom:14px}
+    .paper{
+      border:1px solid var(--wire);
+      border-radius: var(--radius);
+      background: rgba(10,10,18,.45);
+      padding:22px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    }
+    .paper h1{margin:0 0 12px 0}
+    .paper p{line-height:1.65}
+    .axiom{
+      font-size:1.1rem;
+      padding:14px;
+      border:1px dashed var(--wire);
+      border-radius:12px;
+      background: rgba(255,255,255,.03);
+    }
+    .back{display:inline-block; margin-top:18px; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="crumb">artifact a001 · axiom</div>
+    <div class="paper">
+      <h1>translation failure</h1>
+
+      <div class="axiom">
+        <p>
+          If it feels raw, ask what shaped it.<br />
+          If it feels certain, ask what it erased.
+        </p>
+      </div>
+
+      <p>
+        datapanick assumes that clarity is always purchased at a cost.
+        The cost is usually invisible because it is paid upstream:
+        in framing, in compression, in what never entered the system.
+      </p>
+
+      <p>
+        The task is not to remove mediation, but to make its pressure legible.
+      </p>
+
+      <a class="back" href="/">← back to field</a>
+    </div>
+  </div>
+</body>
+</html>
