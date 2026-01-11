@@ -174,24 +174,28 @@ a:hover{text-decoration:underline}
 #panel h3{margin:0 0 10px 0}
 #panel p{margin:10px 0; color: rgba
 
-/* exit footer */
-#exit{
+/* site footer / exit link */
+.site-footer {
   position: fixed;
   bottom: 18px;
-  left: 18px;
-  z-index: 50;
-  font-size: .85rem;
-  opacity: .55;
+  right: 18px;
+  z-index: 100; /* above stage + nodes */
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.85rem;
+  opacity: 0.55;
   pointer-events: auto;
 }
 
-#exit a{
+.site-footer a {
   color: var(--fg);
   text-decoration: none;
 }
 
-#exit a:hover{
+.site-footer a:hover {
   text-decoration: underline;
   opacity: 1;
 }
+
 
